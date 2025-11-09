@@ -11,7 +11,7 @@ export const siteConfig = {
     bedrock: {
       label: "📱 基岩版", 
       ip: "milkteamc.org",
-      port: "10147"
+      port: "19132"
     }
   },
   
