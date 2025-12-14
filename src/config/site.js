@@ -28,14 +28,14 @@ export const siteConfig = {
   links: {
     discord: "https://discord.gg/22DxRjrXRv",
     wiki: "https://wiki.milkteamc.org",
-    rules: "https://wiki.milkteamc.org/rules/",
+    rules: "/terms",
     banlist: "https://bans.milkteamc.org",
     connectGuide: "https://wiki.milkteamc.org/#connect"
   },
   
   navigation: [
     { name: "Discord", href: "https://discord.gg/22DxRjrXRv", external: true },
-    { name: "伺服器規則", href: "https://wiki.milkteamc.org/rules/", external: false },
+    { name: "伺服器規範", href: "/terms", external: false },
     { name: "封禁列表", href: "https://bans.milkteamc.org", external: true},
     { name: "遊玩教學", href: "https://wiki.milkteamc.org", external: false }
   ],
@@ -100,7 +100,7 @@ export const siteConfig = {
   
   footerLinks: {
     quickLinks: [
-      { name: "伺服器規則", href: "https://wiki.milkteamc.org/rules/", external: false },
+      { name: "伺服器規範", href: "/terms", external: false },
       { name: "封禁列表", href: "https://bans.milkteamc.org", external: false },
       { name: "Wiki 頁面", href: "https://wiki.milkteamc.org", external: false }
     ],
