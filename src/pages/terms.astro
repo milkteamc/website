@@ -33,7 +33,6 @@ const { title, description, lastUpdated } = entry.data;
                     <aside class="toc-sidebar">
                         <div class="toc-sticky">
                             <button class="toc-toggle" id="tocToggle">
-                                <span class="toc-icon">📑</span>
                                 <span class="toc-text">目錄</span>
                                 <span class="toc-arrow">▼</span>
                             </button>
@@ -111,35 +110,37 @@ const { title, description, lastUpdated } = entry.data;
             grid-template-columns: 280px 1fr;
             gap: var(--spacing-xl);
             align-items: start;
+            position: relative;
         }
 
         /* Table of Contents */
         .toc-sidebar {
-            position: relative;
-        }
-
-        .toc-sticky {
             position: sticky;
             top: 100px;
+            height: fit-content;
             max-height: calc(100vh - 120px);
             overflow-y: auto;
         }
 
+        .toc-sticky {
+            position: relative;
+        }
+
         /* Custom scrollbar for ToC */
-        .toc-sticky::-webkit-scrollbar {
+        .toc-sidebar::-webkit-scrollbar {
             width: 4px;
         }
 
-        .toc-sticky::-webkit-scrollbar-track {
+        .toc-sidebar::-webkit-scrollbar-track {
             background: transparent;
         }
 
-        .toc-sticky::-webkit-scrollbar-thumb {
+        .toc-sidebar::-webkit-scrollbar-thumb {
             background: var(--border-color);
             border-radius: 2px;
         }
 
-        .toc-sticky::-webkit-scrollbar-thumb:hover {
+        .toc-sidebar::-webkit-scrollbar-thumb:hover {
             background: var(--primary-color);
         }
 
@@ -413,6 +414,8 @@ const { title, description, lastUpdated } = entry.data;
 
             .toc-sidebar {
                 order: -1;
+                position: static;
+                max-height: none;
             }
 
             .toc-sticky {
